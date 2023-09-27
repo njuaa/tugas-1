@@ -1,10 +1,9 @@
 @extends('mainapps')
-@section('title')
-    Login
-@endsection
+@section('title')Login @endsection
 @section('content')
 <div class="py-5">
-    <div class="container">
+<div class="container">
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -69,8 +68,11 @@
                         </div>
                     </form>
                 </div>
+                
             </div>
         </div>
     </div>
+    
+</div>
 </div>
 @endsection

@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PostController;
 
 /*
@@ -14,15 +14,16 @@ use App\Http\Controllers\PostController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/profil', function () {
+        return view('profil');
+});
 
 Auth::routes();
 
-route::get('/', [PostController::class, 'index'])->name('home');
-Route::get('/home', [PostController::class,'index'])->name('home');
-Route::get('/createstts', [PostController::class,'create']);
-Route::get('/saveblog', [PostController::class,'store']);
-Route::get('/edit/{id}', [PostController::class,'edsit']);
+Route::get('/', [PostController::class, 'index'])->name('home');
+Route::get('/home', [PostController::class, 'index'])->name('home');
+Route::get('/createstts', [PostController::class, 'create']);
+Route::post('/saveblog', [PostController::class, 'store']);
+Route::get('/edit/{id}', [PostController::class, 'edit']);
 Route::put('/updateblog/{id}', [PostController::class, 'update']);
-Route::put('/delete/{id}', [PostController::class, 'destory']);
-
-///
+Route::get('/delete/{id}', [PostController::class, 'destroy']);

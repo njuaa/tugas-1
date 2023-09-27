@@ -1,9 +1,9 @@
 @extends('mainapps')
-@section('title')
-    Register
-@endsection
+@section('title')Register @endsection
 @section('content')
+<div class="py-5">
 <div class="container">
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -69,11 +69,15 @@
                                     {{ __('Register') }}
                                 </button>
                             </div>
+                            
                         </div>
                     </form>
                 </div>
+                
             </div>
         </div>
     </div>
+
+</div>
 </div>
 @endsection
